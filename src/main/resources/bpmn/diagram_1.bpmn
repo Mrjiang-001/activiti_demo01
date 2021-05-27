@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_11wha3f" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.0.0">
+  <bpmn:process id="Process_0ihqfy9" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1" name="申请">
+      <bpmn:outgoing>SequenceFlow_1505lyg</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="Task_04rclwx" name="部门领导">
+      <bpmn:incoming>SequenceFlow_1505lyg</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0fb2ppj</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Task_0z1gnbm" name="人事部门">
+      <bpmn:incoming>SequenceFlow_0fb2ppj</bpmn:incoming>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="SequenceFlow_1505lyg" sourceRef="StartEvent_1" targetRef="Task_04rclwx" />
+    <bpmn:sequenceFlow id="SequenceFlow_0fb2ppj" sourceRef="Task_04rclwx" targetRef="Task_0z1gnbm" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_0ihqfy9">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="103" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="186" y="146" width="22" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_04rclwx_di" bpmnElement="Task_04rclwx">
+        <dc:Bounds x="296" y="81" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_0z1gnbm_di" bpmnElement="Task_0z1gnbm">
+        <dc:Bounds x="502" y="81" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1505lyg_di" bpmnElement="SequenceFlow_1505lyg">
+        <di:waypoint x="215" y="121" />
+        <di:waypoint x="296" y="121" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0fb2ppj_di" bpmnElement="SequenceFlow_0fb2ppj">
+        <di:waypoint x="396" y="121" />
+        <di:waypoint x="502" y="121" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
