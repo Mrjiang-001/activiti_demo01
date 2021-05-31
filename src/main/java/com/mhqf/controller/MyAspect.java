@@ -1,5 +1,8 @@
 package com.mhqf.controller;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
+
 /**
  * @author mhqf
  * @version 1.0
